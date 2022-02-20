@@ -1,5 +1,5 @@
 const button = document.getElementById("button");
-
+const aika = document.getElementById("aika");
 var pva;
 var tunnit;
 button.addEventListener("click", () => {
@@ -24,4 +24,11 @@ button.addEventListener("click", () => {
   var minuutit = lasku - tunnit;
   minuutit = minuutit * 60;
   console.log(minuutit);
+  lasku = minuutit.toFixed(0);
+  var sekunnit = minuutit - lasku;
+  console.log(sekunnit);
+  sekunnit = sekunnit * 60;
+  console.log(sekunnit);
+
+  aika.firstElementChild(tunnit, ":", minuutit, ":", sekunnit);
 });
