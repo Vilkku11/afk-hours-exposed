@@ -30,5 +30,5 @@ button.addEventListener("click", () => {
   sekunnit = sekunnit * 60;
   console.log(sekunnit);
 
-  aika.firstElementChild(tunnit, ":", minuutit, ":", sekunnit);
+  //aika.firstElementChild(tunnit, ":", minuutit, ":", sekunnit);
 });
