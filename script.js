@@ -4,6 +4,22 @@ const aika = document.getElementById("aika");
 var pva;
 var tunnit;
 
+/*const newDiv = document.createElement("div");
+var teksti = document.createTextNode("-t67i7ti7");
+
+/*testi = document.createTextNode(
+  "Keskimääräinen aika per päivä: " + tunnit + ":" + kMinuutit + ":" + kSekunnit
+);
+
+newDiv.appendChild(teksti);
+*/
+
+const div = document.createElement("div1");
+div.textContent = " ";
+
+const body = document.body;
+body.append(div);
+
 button.addEventListener("click", () => {
   pva = document.getElementById("annettu").value;
   tunnit = document.getElementById("tunnit").value;
@@ -41,20 +57,14 @@ button.addEventListener("click", () => {
   var kSekunnit = Math.floor(sekunnit);
   console.log("kokonaiset sekunnit " + kSekunnit);
 
-  const newDiv = document.createElement("div");
-
-  const testi = document.createTextNode(
+  div.textContent =
     "Keskimääräinen aika per päivä: " +
-      tunnit +
-      ":" +
-      kMinuutit +
-      ":" +
-      kSekunnit
-  );
-  newDiv.appendChild(testi);
-
-  const divv = document.getElementById("div1");
-  document.body.insertBefore(newDiv, divv);
+    tunnit +
+    ":" +
+    kMinuutit +
+    ":" +
+    kSekunnit;
+  body.append(div);
 
   /* haluttuAika = haluttuAika / 1000;
   haluttuAika = haluttuAika / 3600;
